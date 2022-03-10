@@ -1,4 +1,4 @@
-# OptionMenu
+# OptionMenu2
 
 # Решение задания для Samsung Campus "Списки в Android с изменениями данных". 
 # Автор кода Алмас Киличов
