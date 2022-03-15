@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OptionMenu">
         <activity
+            android:name=".EditMediaPersonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddMediaPersonActivity"
+            android:exported="false" />
+        <activity
             android:name=".WrldTwitchStreamersActivity"
             android:exported="false" />
         <activity

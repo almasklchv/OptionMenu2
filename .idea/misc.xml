@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/layout/activity_add_media_person.xml" value="0.2359375" />
+        <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/layout/activity_edit_media_person.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/layout/activity_twitch_streamers_list.xml" value="0.10572916666666667" />
         <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/layout/activity_wrld_twitch_streamers.xml" value="0.10572916666666667" />
         <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/layout/activity_wrld_youtubers_list.xml" value="0.1" />
         <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/layout/activity_you_tube_top10.xml" value="0.3663751214771623" />
+        <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/layout/activity_youtubers_list.xml" value="0.46647230320699706" />
         <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/layout/item_youtubers.xml" value="0.4" />
+        <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/menu/activity_main_menu.xml" value="0.25" />
+        <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/menu/activity_youtubers_list_menu.xml" value="0.25" />
         <entry key="..\:/Users/PREDATOR/OptionMenu/app/src/main/res/menu/menu1.xml" value="0.25" />
       </map>
     </option>

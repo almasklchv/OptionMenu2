@@ -42,6 +42,8 @@ public class YouTubeAndTwitchAdapter extends ArrayAdapter<MediaPerson> {
         tvChannelPlace.setText(youtuber.getChannelPlace() + "");
         tvChannelSubscribers.setText(youtuber.getChannelSubscribers());
 
+        view.setTag(youtuber.getChannelPlace());
+
         return view;
     }
 }

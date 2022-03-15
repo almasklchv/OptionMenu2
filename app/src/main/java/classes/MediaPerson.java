@@ -1,6 +1,8 @@
 package classes;
 
-public class MediaPerson {
+import java.io.Serializable;
+
+public class MediaPerson implements Serializable {
     private int channelPlace;
     private String channelName;
     private String channelSubscribers;
@@ -8,6 +10,10 @@ public class MediaPerson {
     // constructor
     public MediaPerson(int channelPlace, String channelName, String channelSubscribers) {
         this.channelPlace = channelPlace;
+        this.channelName = channelName;
+        this.channelSubscribers = channelSubscribers;
+    }
+    public MediaPerson(String channelName, String channelSubscribers) {
         this.channelName = channelName;
         this.channelSubscribers = channelSubscribers;
     }
