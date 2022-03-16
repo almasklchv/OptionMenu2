@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,7 @@ public class YoutubersListActivity extends AppCompatActivity {
     ArrayList<MediaPerson> youtubers;
     YouTubeAndTwitchAdapter adapter;
     public static final int ADD_MEDIA_PERSON_ACTIVITY_REQUEST_CODE = 1;
+    public static final int EDIT_MEDIA_PERSON_ACTIVITY_REQUEST_CODE = 2;
     int channelPlace = 10;
 
 
@@ -60,6 +62,7 @@ public class YoutubersListActivity extends AppCompatActivity {
                             if (i == DialogInterface.BUTTON_POSITIVE) {
                                 youtubers.remove(finalDelete);
                                 adapter.notifyDataSetChanged();
+                                Toast.makeText(getApplicationContext(), "Выбранный вами пункт удален.", Toast.LENGTH_LONG).show();
                             }
                         }
                     };
@@ -131,11 +134,26 @@ public class YoutubersListActivity extends AppCompatActivity {
 
         if (requestCode == ADD_MEDIA_PERSON_ACTIVITY_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
+                Toast.makeText(getApplicationContext(), "Новый пункт добавлен.", Toast.LENGTH_LONG).show();
+
                 channelPlace++;
                 MediaPerson mp = (MediaPerson) data.getExtras().get("mediaPerson");
                 mp.setChannelPlace(channelPlace);
                 this.youtubers.add(mp);
                 adapter.notifyDataSetChanged();
+            }
+        } else if (requestCode == EDIT_MEDIA_PERSON_ACTIVITY_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+                Toast.makeText(getApplicationContext(), "Выбранный вами пункт изменен.", Toast.LENGTH_LONG).show();
+
+                MediaPerson mediaPerson = (MediaPerson) data.getExtras().get("mediaPerson");
+                for (MediaPerson mp : youtubers) {
+                    if (mp.getChannelPlace() == mediaPerson.getChannelPlace()) {
+                        mp.setChannelName(mediaPerson.getChannelName());
+                        mp.setChannelSubscribers(mediaPerson.getChannelSubscribers());
+                        adapter.notifyDataSetChanged();
+                    }
+                }
             }
         }
     }
